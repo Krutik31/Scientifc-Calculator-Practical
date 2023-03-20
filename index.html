@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Scientific Calculator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="container-fluid text-center">
+  <br>
+  <div class="h2">
+    Scientific Calculator
+  </div>
+  <div class="h4">
+    (Krutik Patel)
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4 calculator-div">
+
+      <div class="row input-row">
+        <div class="col-8 calculator-input-div h4" id="user-input">
+          
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-2 calculator-element-div font-weight-bold" onclick="expression('sin')">
+          sin
+        </div>
+        <div class="col-2 calculator-element-div font-weight-bold" onclick="expression('cos')">
+          cos
+        </div>
+        <div class="col-2 calculator-element-div font-weight-bold" onclick="expression('tan')">
+          tan
+        </div>
+        <div class="col-2 calculator-element-div font-weight-bold" onclick="lastRemove()">
+          &#8617;
+        </div>
+        <div class="col-3 calculator-element-div font-weight-bold" onclick="clr()">
+          CLR
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-2 calculator-element-div font-weight-bold" onclick="expression('x2')">
+          x<sup>2</sup>
+        </div>
+        <div class="col-2 calculator-element-div font-weight-bold" onclick="expression('1/x')">
+          1/x
+        </div>
+        <div class="col-2 calculator-element-div font-weight-bold" onclick="expression('mod')">
+          |x|
+        </div>
+        <div class="col-2 calculator-element-div font-weight-bold" onclick="expression('exp')">
+          exp
+        </div>
+        <div class="col-3 calculator-element-div font-weight-bold" onclick="expression('%')">
+          mod
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-2 calculator-element-div font-weight-bold" onclick="expression('sqrt')">
+          &Sqrt;x
+        </div>
+        <div class="col-2 calculator-element-div font-weight-bold" onclick="changeInputValue('(')">
+          (
+        </div>
+        <div class="col-2 calculator-element-div font-weight-bold" onclick="changeInputValue(')')">
+          )
+        </div>
+        <div class="col-2 calculator-element-div font-weight-bold" onclick="factorial()">
+          n!
+        </div>
+        <div class="col-3 calculator-element-div font-weight-bold" onclick="expression('/')">
+          &#247;
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-2 calculator-element-div font-weight-bold" onclick="expression('**')">
+          x<sup>y</sup>
+        </div>
+        <div class="col-2 calculator-element-div font-weight-bold" onclick="changeInputValue('7')">
+          7
+        </div>
+        <div class="col-2 calculator-element-div font-weight-bold" onclick="changeInputValue('8')">
+          8
+        </div>
+        <div class="col-2 calculator-element-div font-weight-bold" onclick="changeInputValue('9')">
+          9
+        </div>
+        <div class="col-3 calculator-element-div font-weight-bold" onclick="expression('*')">
+          X
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-2 calculator-element-div font-weight-bold" onclick="expression('10x')">
+          10<sup>x</sup>
+        </div>
+        <div class="col-2 calculator-element-div font-weight-bold" onclick="changeInputValue('4')">
+          4
+        </div>
+        <div class="col-2 calculator-element-div font-weight-bold" onclick="changeInputValue('5')">
+          5
+        </div>
+        <div class="col-2 calculator-element-div font-weight-bold" onclick="changeInputValue('6')">
+          6
+        </div>
+        <div class="col-3 calculator-element-div font-weight-bold" onclick="expression('-')">
+          -
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-2 calculator-element-div font-weight-bold" onclick="expression('log')">
+          log<sub>2</sub>
+        </div>
+        <div class="col-2 calculator-element-div font-weight-bold" onclick="changeInputValue('1')">
+          1
+        </div>
+        <div class="col-2 calculator-element-div font-weight-bold" onclick="changeInputValue('2')">
+          2
+        </div>
+        <div class="col-2 calculator-element-div font-weight-bold" onclick="changeInputValue('3')">
+          3
+        </div>
+        <div class="col-3 calculator-element-div font-weight-bold" onclick="expression('+')">
+          +
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-2 calculator-element-div font-weight-bold" onclick="expression('ln')">
+          ln
+        </div>
+        <div class="col-2 calculator-element-div font-weight-bold" onclick="changeInputValue('0')">
+          0
+        </div>
+        <div class="col-2 calculator-element-div font-weight-bold" onclick="changeInputValue('00')">
+          00
+        </div>
+        <div class="col-2 calculator-element-div font-weight-bold" onclick="changeInputValue('.')">
+          .
+        </div>
+        <div class="col-3 calculator-element-div font-weight-bold" onclick="equals()">
+          =
+        </div>
+      </div>
+
+    </div>
+    <div class="col-4"></div>
+  </div> 
+</div>
+
+<script src="calculator-script.js"></script>
+
+</body>
+</html>

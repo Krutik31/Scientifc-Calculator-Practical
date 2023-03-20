@@ -1,0 +1,31 @@
+.calculator-div {
+  border: 2px solid #1700ff;
+  box-shadow: 0px 0px 10px;
+}
+
+.calculator-input-div {
+  border: 3px solid #ff5c00;
+  margin: 4px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.input-row .col-8{
+  flex: auto;
+  max-width: 100%;
+}
+
+.calculator-element-div {
+  border: 2px solid #1700ff;
+  margin: 4px;
+  padding-bottom: 14px;
+  padding-top: 14px;
+}
+
+.calculator-element-div:hover {
+  border: 2px solid #1700ff;
+  margin: 4px;
+  padding-bottom: 14px;
+  padding-top: 14px;
+  box-shadow: 0px 0px 5px;
+}
